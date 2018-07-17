@@ -1,0 +1,132 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: url('/assets/background.png') center;
+  background-size: cover;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.logo {
+  display: block;
+  margin: 20px auto;
+}
+
+.container {
+  flex-grow: 1;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+
+  h1 {
+    font-family: 'Baloo', sans-serif;
+    font-size: 32px;
+    text-transform: uppercase;
+  }
+
+  p {
+    max-width: 600px;
+    margin: 1em auto;
+    font-size: 13px;
+    letter-spacing: 0.02em;
+    a {
+      color: #9B01C1;
+      font-weight: bold;
+    }
+  }
+
+  form {
+    input {
+      display: block;
+      height: 32px;
+      width: 300px;
+      margin: 20px auto;
+      font-size: 12px;
+      color: white;
+      background: transparent;
+      outline: none;
+      border: 0;
+      border-bottom: 1px solid #7B77D2;
+      font-family: 'Baloo', sans-serif;
+      box-shadow: 0 6px 6px -3px rgba(#36265F, .8);
+    }
+    :-ms-input-placeholder {
+      color: white;
+    }
+    ::-ms-input-placeholder {
+      color: white;
+    }
+    ::placeholder {
+      color: white;
+      opacity: 1;
+    }
+  }
+
+  .button-wrapper {
+    width: 114px;
+    margin: 45px auto;
+    height: 38px;
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    position: relative;
+    padding: 0;
+    font-size: 14px;
+    font-family: 'Baloo', sans-serif;
+    text-shadow: 0px 0px 5px #9B01C1;
+    &:hover {
+      color: darken(white, 15);
+    }
+
+    svg {
+      position: absolute;
+      left: -144px;
+      top: -8px;
+      z-index: -1;
+    }
+  }
+
+  .card-wrapper {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Baloo', sans-serif;
+    .inner-wrapper {
+      position: relative;
+      .card-title, .card-type {
+        position: absolute;
+        width: 164px;
+        left: 19px;
+        text-align: center;
+        text-transform: capitalize;
+        bottom: 57px;
+      }
+
+      .card-type {
+        bottom: 27px;
+        font-size: 14px;
+      }
+    }
+  }
+
+
+  &.error {
+    h1 {
+      margin: 10px auto 0;
+    }
+    svg {
+      margin: 0 auto;
+    }
+  }
+}

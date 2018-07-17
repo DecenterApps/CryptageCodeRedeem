@@ -1,0 +1,26 @@
+{
+  "name": "cryptagecoderedeem",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.mix.js",
+  "scripts": {
+    "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/webpack-mix/setup/webpack.config.js",
+    "watch": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/webpack-mix/setup/webpack.config.js",
+    "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/webpack-mix/setup/webpack.config.js",
+    "prod": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/webpack-mix/setup/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DecenterApps/CryptageCodeRedeem.git"
+  },
+  "author": "Nikola Vuković, Nebojša Urošević",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DecenterApps/CryptageCodeRedeem/issues"
+  },
+  "homepage": "https://github.com/DecenterApps/CryptageCodeRedeem#readme",
+  "dependencies": {
+    "webpack": "^3.12.0",
+    "webpack-mix": "^2.0.2"
+  }
+}
