@@ -9,16 +9,10 @@ CREATE TABLE "user"
     address VARCHAR(120)
 );
 
-CREATE TABLE card
-(
-    id SERIAL PRIMARY KEY,
-    name VARCHAR(120)
-);
-
 CREATE TABLE coupon
 (
     id SERIAL PRIMARY KEY,
     token VARCHAR(10) UNIQUE,
-    user_id INT REFERENCES "user" (id),
-    card_id INT REFERENCES card (id)
+    card_id INT NOT NULL,
+    user_id INT REFERENCES "user" (id)
 );

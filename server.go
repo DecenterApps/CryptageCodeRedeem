@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"io/ioutil"
+	"gopkg.in/yaml.v2"
 
 	"github.com/Sirupsen/logrus"
 	"github.com/go-ozzo/ozzo-dbx"
@@ -38,8 +40,21 @@ func main() {
 	}
 	db.LogFunc = logger.Infof
 
+	var cryptage app.Cryptage
+	cardsYaml, _ := ioutil.ReadFile(app.Config.Cards)
+	err = yaml.Unmarshal(cardsYaml, &cryptage)
+
+	for i := 0; i < len(cryptage.Cards); i++ {
+		for j := 1; j <= len(cryptage.Cards[uint(i)]); j++ {
+			card := cryptage.Cards[uint(i)][uint(j)]
+			cryptage.Cards[uint(i)][card.Level] = card
+		}
+
+		delete(cryptage.Cards[uint(i)], uint(len(cryptage.Cards[uint(i)])-1))
+	}
+
 	// wire up API routing
-	http.Handle("/", buildRouter(logger, db))
+	http.Handle("/", buildRouter(logger, db, cryptage))
 
 	// start the server
 	address := fmt.Sprintf(":%v", app.Config.ServerPort)
@@ -47,7 +62,7 @@ func main() {
 	panic(http.ListenAndServe(address, nil))
 }
 
-func buildRouter(logger *logrus.Logger, db *dbx.DB) *routing.Router {
+func buildRouter(logger *logrus.Logger, db *dbx.DB, cryptage app.Cryptage) *routing.Router {
 	router := routing.New()
 
 	router.To("GET,HEAD", "/ping", func(c *routing.Context) error {
@@ -67,7 +82,7 @@ func buildRouter(logger *logrus.Logger, db *dbx.DB) *routing.Router {
 	)
 
 	rg := router.Group("")
-	endpoint.ServeCouponResource(rg, service.NewCouponService(dao.NewCouponDAO(), dao.NewUserDAO(), dao.NewCardDAO()))
+	endpoint.ServeCouponResource(rg, service.NewCouponService(dao.NewCouponDAO(), dao.NewUserDAO(), dao.NewCardDAO(cryptage)))
 
 	return router
 }
