@@ -42,8 +42,8 @@ func (s *CouponService) GetByToken(rs app.RequestScope, token string) (*model.Co
 		return nil, err
 	}
 
-	if couponDB.UserId != 0 {
-		coupon.User, err = s.userDao.Get(rs, couponDB.UserId)
+	if couponDB.UserId != nil {
+		coupon.User, err = s.userDao.Get(rs, *couponDB.UserId)
 		if err != nil {
 			return nil, err
 		}

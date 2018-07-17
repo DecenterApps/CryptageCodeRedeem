@@ -12,7 +12,7 @@ type Coupon struct {
 	Id    int
 	Token string
 	CardId  int
-	UserId  int
+	UserId  *int
 }
 
 func NewCouponDAO() *CouponDAO {
