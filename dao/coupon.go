@@ -8,6 +8,13 @@ import (
 
 type CouponDAO struct{}
 
+type CouponDB struct {
+	Id    int
+	Token string
+	CardId  int
+	UserId  int
+}
+
 func NewCouponDAO() *CouponDAO {
 	return &CouponDAO{}
 }
@@ -18,8 +25,8 @@ func (dao *CouponDAO) Get(rs app.RequestScope, id int) (*model.Coupon, error) {
 	return &coupon, err
 }
 
-func (dao *CouponDAO) GetByToken(rs app.RequestScope, token int) (*model.Coupon, error) {
-	var coupon model.Coupon
+func (dao *CouponDAO) GetByToken(rs app.RequestScope, token string) (*CouponDB, error) {
+	var coupon CouponDB
 	err := rs.Tx().Select().Where(dbx.HashExp{"token": token}).One(&coupon)
 	return &coupon, err
 }

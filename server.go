@@ -67,7 +67,7 @@ func buildRouter(logger *logrus.Logger, db *dbx.DB) *routing.Router {
 	)
 
 	rg := router.Group("")
-	endpoint.ServeCouponResource(rg, service.NewCouponService(dao.NewCouponDAO()))
+	endpoint.ServeCouponResource(rg, service.NewCouponService(dao.NewCouponDAO(), dao.NewUserDAO(), dao.NewCardDAO()))
 
 	return router
 }

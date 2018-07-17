@@ -1,2 +1,2 @@
 # The Data Source Name for the database
-dsn: "postgres://root:@127.0.0.1:5432/cryptage?sslmode=disable"
+dsn: "postgres://root:password@127.0.0.1:5432/cryptage?sslmode=disable"

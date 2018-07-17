@@ -13,16 +13,11 @@ type appConfig struct {
 	ErrorFile          string `mapstructure:"error_file"`
 	ServerPort         int    `mapstructure:"server_port"`
 	DSN                string `mapstructure:"dsn"`
-	JWTSigningMethod   string `mapstructure:"jwt_signing_method"`
-	JWTSigningKey      string `mapstructure:"jwt_signing_key"`
-	JWTVerificationKey string `mapstructure:"jwt_verification_key"`
 }
 
 func (config appConfig) Validate() error {
 	return validation.ValidateStruct(&config,
 		validation.Field(&config.DSN, validation.Required),
-		validation.Field(&config.JWTSigningKey, validation.Required),
-		validation.Field(&config.JWTVerificationKey, validation.Required),
 	)
 }
 
