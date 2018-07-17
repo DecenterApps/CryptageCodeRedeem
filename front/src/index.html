@@ -7,11 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Redeem Your Code - Cryptage: Origins</title>
 
-    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/freeCards/assets/style.css">
     <link href="https://fonts.googleapis.com/css?family=Baloo|Montserrat:400,400i,700" rel="stylesheet">
 </head>
 <body>
-<img src="/assets/logo.png" alt="Cryptage: Origins Logo" width="417" class="logo">
+<img src="/freeCards/assets/logo.png" alt="Cryptage: Origins Logo" width="417" class="logo">
 {{if eq .Error "invalid"}}
 <div class="container error">
     <div>
@@ -91,7 +91,7 @@
                     <path d="M151.348 0H16.5361L0 16.7088V229.372V246.654H17.1632H151.348L168.511 229.372V17.2815V0H151.348Z" transform="translate(16.7866 16.7551)" stroke="url(#paint3_linear)" stroke-opacity="0.53" stroke-width="1.59052"/>
                 </g>
                 <path d="M0 0H167.006" transform="matrix(1 0.000831868 0.00109745 0.999999 17.5332 233.487)" stroke="url(#paint4_linear)" stroke-width="1.59052"/>
-                <path d="M3.45521 2.38697L0 0H43.1901L40.3107 2.38697H3.45521Z" transform="translate(79.731 234.051) rotate(-0.212609)" fill="{{.TypeColor}}"/>
+                <path d="M3.45521 2.38697L0 0H43.1901L40.3107 2.38697H3.45521Z" transform="translate(79.731 234.051) rotate(-0.212609)" fill="{{.Card.GetColor}}"/>
                 <defs>
                     <filter id="filter0_d" x="0.882831" y="0.849139" width="200.32" height="278.466" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                         <feFlood flood-opacity="0" result="BackgroundImageFix"/>
@@ -124,101 +124,101 @@
                         <stop offset="1" stop-color="#9797FB" stop-opacity="0"/>
                     </linearGradient>
                     <linearGradient id="paint2_linear" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.58973 -85.931 95.8745 1.77723 44.2669 248.948)">
-                        <stop stop-color="{{.TypeColor}}"/>
-                        <stop offset="1" stop-color="{{.TypeColor}}" stop-opacity="0"/>
+                        <stop stop-color="{{.Card.GetColor}}"/>
+                        <stop offset="1" stop-color="{{.Card.GetColor}}" stop-opacity="0"/>
                     </linearGradient>
                     <linearGradient id="paint3_linear" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(174.369 -11.7278) scale(174.089 266.864) rotate(90)">
                         <stop/>
                         <stop offset="1" stop-opacity="0"/>
                     </linearGradient>
                     <linearGradient id="paint4_linear" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-168.511 0.0881314 53.5987 -11135.6 140.17 5567.53)">
-                        <stop stop-color="{{.TypeColor}}" stop-opacity="0"/>
-                        <stop offset="0.221092" stop-color="{{.TypeColor}}"/>
-                        <stop offset="0.768229" stop-color="{{.TypeColor}}"/>
-                        <stop offset="1" stop-color="{{.TypeColor}}" stop-opacity="0"/>
+                        <stop stop-color="{{.Card.GetColor}}" stop-opacity="0"/>
+                        <stop offset="0.221092" stop-color="{{.Card.GetColor}}"/>
+                        <stop offset="0.768229" stop-color="{{.Card.GetColor}}"/>
+                        <stop offset="1" stop-color="{{.Card.GetColor}}" stop-opacity="0"/>
                     </linearGradient>
                     <image id="lcimage0" width="1000" height="1000" xlinkHref="" />
                 </defs>
             </svg>
 
-            <div class="card-title">{{.CardTitle}}</div>
-            <div class="card-type">{{.CardType}}</div>
+            <div class="card-title">{{.Card.Title}}</div>
+            <div class="card-type">{{.Card.Type}}</div>
         </div>
     </div>
 
 
-    <form action="">
-        <input type="email" placeholder="EMAIL">
-        <input type="text" placeholder="ETH ADDRESS">
+    <form action="" method="POST">
+        <input type="email" placeholder="EMAIL" name="email">
+        <input type="text" placeholder="ETH ADDRESS" name="address">
+
+        <button class="button-wrapper">
+            REDEEM
+            <svg width="403" height="53" viewBox="0 0 403 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <filter id="filter0_d_btn" x="0.0398331" y="10.9998" width="402.2" height="28.1255" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0"/>
+                        <feOffset/>
+                        <feGaussianBlur stdDeviation="6.32823"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0.132786 0 0 0 0 0 0 0 0 0 0.473049 0 0 0 1 0"/>
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                    </filter>
+                    <filter id="filter1_d_btn" x="136.911" y="0.910921" width="128.178" height="51.1782" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0"/>
+                        <feOffset/>
+                        <feGaussianBlur stdDeviation="4.54008"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0.132786 0 0 0 0 0 0 0 0 0 0.473049 0 0 0 1 0"/>
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                    </filter>
+                    <filter id="filter2_d_btn" x="145.581" y="9.42701" width="110.84" height="34.1472" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0"/>
+                        <feOffset/>
+                        <feGaussianBlur stdDeviation="1.00891"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"/>
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                    </filter>
+                    <linearGradient id="paint0_linear_btn" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(4.13579e-05 -12.4346) scale(376.887 24.8692)">
+                        <stop stop-color="#9797FB" stop-opacity="0"/>
+                        <stop offset="0.486188" stop-color="#9797FB"/>
+                        <stop offset="1" stop-color="#9797FB" stop-opacity="0"/>
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_btn" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(108) scale(101.324 31) rotate(90)">
+                        <stop stop-color="#452499"/>
+                        <stop offset="1" stop-color="#080314"/>
+                    </linearGradient>
+                    <linearGradient id="paint2_linear_btn" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(108 431.661) scale(103.68 832.323) rotate(180)">
+                        <stop offset="0.790055" stop-color="#9797FB"/>
+                        <stop offset="1" stop-color="#9797FB"/>
+                    </linearGradient>
+                    <linearGradient id="paint3_linear_btn" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(105.037 0.935226) scale(99.573 29.7072) rotate(90)">
+                        <stop/>
+                        <stop offset="1" stop-opacity="0"/>
+                    </linearGradient>
+                    <linearGradient id="paint4_linear_btn" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-7.21859 52.5102 -211.63 -21.5726 156.748 10.7863)">
+                        <stop stop-color="#C8C8FC"/>
+                        <stop offset="0.18232" stop-color="#C8C8FC" stop-opacity="0"/>
+                    </linearGradient>
+                </defs>
+                <g filter="url(#filter0_d_btn)">
+                    <line y1="-1.40627" x2="376.887" y2="-1.40627" transform="translate(12.6963 26.4688)" stroke="url(#paint0_linear_btn)" stroke-width="2.81255"/>
+                </g>
+                <g filter="url(#filter1_d_btn)">
+                    <path d="M0 6.32653V24.6735L7.34694 31H100.653L108 24.6735V6.32653L100.653 0H7.34694L0 6.32653Z" transform="translate(147 11)" fill="url(#paint1_linear_btn)"/>
+                    <path d="M0 6.32653V24.6735L7.34694 31H100.653L108 24.6735V6.32653L100.653 0H7.34694L0 6.32653Z" transform="translate(147 11)" stroke="url(#paint2_linear_btn)" stroke-width="2.01782"/>
+                </g>
+                <g filter="url(#filter2_d_btn)">
+                    <path d="M0 5.69388V23.4082L6.97959 29.102L99.1837 28.7857L105.796 23.0918V5.69388L99.1837 0H6.61224L0 5.69388Z" transform="translate(148.103 11.9492)" stroke="url(#paint3_linear_btn)" stroke-opacity="0.93" stroke-width="1.00891"/>
+                </g>
+                <path d="M0 4.82742V19.8461L5.90561 24.6735L95.0969 24.4053L100.653 19.5779V4.82742L95.0969 0H5.55612L0 4.82742Z" transform="translate(150.674 14.1631)" stroke="url(#paint4_linear_btn)" stroke-opacity="0.22" stroke-width="1.00891"/>
+            </svg>
+
+        </button>
     </form>
-
-    <button class="button-wrapper">
-        REDEEM
-        <svg width="403" height="53" viewBox="0 0 403 53" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <filter id="filter0_d_btn" x="0.0398331" y="10.9998" width="402.2" height="28.1255" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0"/>
-                    <feOffset/>
-                    <feGaussianBlur stdDeviation="6.32823"/>
-                    <feColorMatrix type="matrix" values="0 0 0 0 0.132786 0 0 0 0 0 0 0 0 0 0.473049 0 0 0 1 0"/>
-                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
-                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
-                </filter>
-                <filter id="filter1_d_btn" x="136.911" y="0.910921" width="128.178" height="51.1782" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0"/>
-                    <feOffset/>
-                    <feGaussianBlur stdDeviation="4.54008"/>
-                    <feColorMatrix type="matrix" values="0 0 0 0 0.132786 0 0 0 0 0 0 0 0 0 0.473049 0 0 0 1 0"/>
-                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
-                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
-                </filter>
-                <filter id="filter2_d_btn" x="145.581" y="9.42701" width="110.84" height="34.1472" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0"/>
-                    <feOffset/>
-                    <feGaussianBlur stdDeviation="1.00891"/>
-                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"/>
-                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
-                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
-                </filter>
-                <linearGradient id="paint0_linear_btn" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(4.13579e-05 -12.4346) scale(376.887 24.8692)">
-                    <stop stop-color="#9797FB" stop-opacity="0"/>
-                    <stop offset="0.486188" stop-color="#9797FB"/>
-                    <stop offset="1" stop-color="#9797FB" stop-opacity="0"/>
-                </linearGradient>
-                <linearGradient id="paint1_linear_btn" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(108) scale(101.324 31) rotate(90)">
-                    <stop stop-color="#452499"/>
-                    <stop offset="1" stop-color="#080314"/>
-                </linearGradient>
-                <linearGradient id="paint2_linear_btn" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(108 431.661) scale(103.68 832.323) rotate(180)">
-                    <stop offset="0.790055" stop-color="#9797FB"/>
-                    <stop offset="1" stop-color="#9797FB"/>
-                </linearGradient>
-                <linearGradient id="paint3_linear_btn" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(105.037 0.935226) scale(99.573 29.7072) rotate(90)">
-                    <stop/>
-                    <stop offset="1" stop-opacity="0"/>
-                </linearGradient>
-                <linearGradient id="paint4_linear_btn" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-7.21859 52.5102 -211.63 -21.5726 156.748 10.7863)">
-                    <stop stop-color="#C8C8FC"/>
-                    <stop offset="0.18232" stop-color="#C8C8FC" stop-opacity="0"/>
-                </linearGradient>
-            </defs>
-            <g filter="url(#filter0_d_btn)">
-                <line y1="-1.40627" x2="376.887" y2="-1.40627" transform="translate(12.6963 26.4688)" stroke="url(#paint0_linear_btn)" stroke-width="2.81255"/>
-            </g>
-            <g filter="url(#filter1_d_btn)">
-                <path d="M0 6.32653V24.6735L7.34694 31H100.653L108 24.6735V6.32653L100.653 0H7.34694L0 6.32653Z" transform="translate(147 11)" fill="url(#paint1_linear_btn)"/>
-                <path d="M0 6.32653V24.6735L7.34694 31H100.653L108 24.6735V6.32653L100.653 0H7.34694L0 6.32653Z" transform="translate(147 11)" stroke="url(#paint2_linear_btn)" stroke-width="2.01782"/>
-            </g>
-            <g filter="url(#filter2_d_btn)">
-                <path d="M0 5.69388V23.4082L6.97959 29.102L99.1837 28.7857L105.796 23.0918V5.69388L99.1837 0H6.61224L0 5.69388Z" transform="translate(148.103 11.9492)" stroke="url(#paint3_linear_btn)" stroke-opacity="0.93" stroke-width="1.00891"/>
-            </g>
-            <path d="M0 4.82742V19.8461L5.90561 24.6735L95.0969 24.4053L100.653 19.5779V4.82742L95.0969 0H5.55612L0 4.82742Z" transform="translate(150.674 14.1631)" stroke="url(#paint4_linear_btn)" stroke-opacity="0.22" stroke-width="1.00891"/>
-        </svg>
-
-    </button>
 </div>
 {{end}}
 </body>

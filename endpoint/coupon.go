@@ -6,73 +6,75 @@ import (
 	"github.com/go-ozzo/ozzo-routing"
 	"github.com/DecenterApps/CryptageCodeRedeem/app"
 	"github.com/DecenterApps/CryptageCodeRedeem/model"
+	"net/http"
 )
 
 type (
-	// couponService specifies the interface for the coupon service needed by couponResource.
 	couponService interface {
 		Get(rs app.RequestScope, id int) (*model.Coupon, error)
 		GetByToken(rs app.RequestScope, token string) (*model.Coupon, error)
 		Update(rs app.RequestScope, id int, model *model.Coupon) (*model.Coupon, error)
 	}
 
-	userService interface {
-		Get(rs app.RequestScope, id int) (*model.User, error)
-		Create(rs app.RequestScope, model *model.User) (*model.User, error)
+	cardService interface {
+		Get(rs app.RequestScope, id int) (*model.Card, error)
 	}
 
 	couponResource struct {
-		service couponService
-		userService userService
+		couponService couponService
+		cardService   cardService
 	}
 
 	response struct {
 		Coupon *model.Coupon
-		Error string
+		Card   *model.Card
+		Error  string
 	}
 )
 
-func ServeCouponResource(rg *routing.RouteGroup, service couponService, userService userService) {
-	r := &couponResource{service, userService}
+func ServeCouponResource(rg *routing.RouteGroup, couponService couponService, cardService cardService) {
+	r := &couponResource{couponService, cardService}
 	rg.Get("/freeCards/<token>", r.get)
 	rg.Post("/freeCards/<token>", r.update)
 }
 
 func (r *couponResource) get(c *routing.Context) error {
 	tmpl := template.Must(template.ParseFiles("./front/src/index.html"))
-	coupon, err := r.service.GetByToken(app.GetRequestScope(c), c.Param("token"))
+	coupon, err := r.couponService.GetByToken(app.GetRequestScope(c), c.Param("token"))
 	if err != nil {
 		return tmpl.Execute(c.Response, response{Error: "invalid"})
 	}
 
-	if coupon.User != nil {
-		return tmpl.Execute(c.Response, response{Error: "already-used"})
+	if coupon.Email != nil && coupon.Address != nil {
+		return tmpl.Execute(c.Response, response{Error: "used"})
 	}
 
-	return tmpl.Execute(c.Response, response{Coupon: coupon})
+	card, _ := r.cardService.Get(app.GetRequestScope(c), coupon.Id)
+	return tmpl.Execute(c.Response, response{Coupon: coupon, Card: card})
 }
 
 func (r *couponResource) update(c *routing.Context) error {
 	rs := app.GetRequestScope(c)
 
-	coupon, err := r.service.GetByToken(rs, c.Param("token"))
+	coupon, err := r.couponService.GetByToken(rs, c.Param("token"))
+	if err != nil {
+		return err
+	}
 
-	if coupon.User != nil {
+	if coupon.Email != nil && coupon.Address != nil {
 		return c.Write("Coupon already used")
 	}
 
+	coupon.Email = new(string)
+	coupon.Address = new(string)
+	*coupon.Email = c.PostForm("email")
+	*coupon.Address = c.PostForm("address")
+
+	_, err = r.couponService.Update(rs, coupon.Id, coupon)
 	if err != nil {
 		return err
 	}
 
-	user := model.User{Email: c.Param("email"), Address: c.Param("address")}
-	r.userService.Create(rs, &user)
-	coupon.User = &user
-
-	response, err := r.service.Update(rs, coupon.Id, coupon)
-	if err != nil {
-		return err
-	}
-
-	return c.Write(response)
+	http.Redirect(c.Response, c.Request, "https://cryptage.co", 301)
+	return nil
 }

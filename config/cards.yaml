@@ -1,7 +1,7 @@
 cards:
   0:
     1:
-      ID: '0'
+      id: 0
       acceptedTags:
       - asset
       cost:
@@ -30,7 +30,7 @@ cards:
         power: 5
         space: 40
     2:
-      ID: '0'
+      id: 0
       acceptedTags:
       - asset
       cost:
@@ -59,7 +59,7 @@ cards:
         power: 5
         space: 50
     3:
-      ID: '0'
+      id: 0
       acceptedTags:
       - asset
       cost:
@@ -88,7 +88,7 @@ cards:
         power: 10
         space: 50
     4:
-      ID: '0'
+      id: 0
       acceptedTags:
       - asset
       cost:
@@ -117,7 +117,7 @@ cards:
         power: 10
         space: 60
     5:
-      ID: '0'
+      id: 0
       acceptedTags:
       - asset
       cost:
@@ -147,7 +147,7 @@ cards:
         space: 60
   1:
     1:
-      ID: '1'
+      id: 1
       acceptedTags:
       - asset
       cost:
@@ -177,7 +177,7 @@ cards:
         power: 0
         space: 60
     2:
-      ID: '1'
+      id: 1
       acceptedTags:
       - asset
       cost:
@@ -207,7 +207,7 @@ cards:
         power: 0
         space: 70
     3:
-      ID: '1'
+      id: 1
       acceptedTags:
       - asset
       cost:
@@ -237,7 +237,7 @@ cards:
         power: 0
         space: 80
     4:
-      ID: '1'
+      id: 1
       acceptedTags:
       - asset
       cost:
@@ -267,7 +267,7 @@ cards:
         power: 0
         space: 90
     5:
-      ID: '1'
+      id: 1
       acceptedTags:
       - asset
       cost:
@@ -298,7 +298,7 @@ cards:
         space: 100
   2:
     1:
-      ID: '2'
+      id: 2
       acceptedTags:
       - asset
       cost:
@@ -327,7 +327,7 @@ cards:
         power: 24
         space: 80
     2:
-      ID: '2'
+      id: 2
       acceptedTags:
       - asset
       cost:
@@ -356,7 +356,7 @@ cards:
         power: 24
         space: 100
     3:
-      ID: '2'
+      id: 2
       acceptedTags:
       - asset
       cost:
@@ -385,7 +385,7 @@ cards:
         power: 30
         space: 100
     4:
-      ID: '2'
+      id: 2
       acceptedTags:
       - asset
       cost:
@@ -414,7 +414,7 @@ cards:
         power: 30
         space: 120
     5:
-      ID: '2'
+      id: 2
       acceptedTags:
       - asset
       cost:
@@ -444,7 +444,7 @@ cards:
         space: 120
   3:
     1:
-      ID: '3'
+      id: 3
       acceptedTags:
       - asset
       cost:
@@ -474,7 +474,7 @@ cards:
         power: 48
         space: 120
     2:
-      ID: '3'
+      id: 3
       acceptedTags:
       - asset
       cost:
@@ -504,7 +504,7 @@ cards:
         power: 48
         space: 140
     3:
-      ID: '3'
+      id: 3
       acceptedTags:
       - asset
       cost:
@@ -534,7 +534,7 @@ cards:
         power: 70
         space: 140
     4:
-      ID: '3'
+      id: 3
       acceptedTags:
       - asset
       cost:
@@ -564,7 +564,7 @@ cards:
         power: 70
         space: 160
     5:
-      ID: '3'
+      id: 3
       acceptedTags:
       - asset
       cost:
@@ -595,7 +595,7 @@ cards:
         space: 160
   4:
     1:
-      ID: '4'
+      id: 4
       acceptedTags:
       - asset
       cost:
@@ -624,7 +624,7 @@ cards:
         power: 72
         space: 160
     2:
-      ID: '4'
+      id: 4
       acceptedTags:
       - asset
       cost:
@@ -653,7 +653,7 @@ cards:
         power: 72
         space: 200
     3:
-      ID: '4'
+      id: 4
       acceptedTags:
       - asset
       cost:
@@ -682,7 +682,7 @@ cards:
         power: 96
         space: 200
     4:
-      ID: '4'
+      id: 4
       acceptedTags:
       - asset
       cost:
@@ -711,7 +711,7 @@ cards:
         power: 96
         space: 240
     5:
-      ID: '4'
+      id: 4
       acceptedTags:
       - asset
       cost:
@@ -741,7 +741,7 @@ cards:
         space: 240
   5:
     1:
-      ID: '5'
+      id: 5
       acceptedTags:
       - asset
       cost:
@@ -770,7 +770,7 @@ cards:
         power: 96
         space: 240
     2:
-      ID: '5'
+      id: 5
       acceptedTags:
       - asset
       cost:
@@ -799,7 +799,7 @@ cards:
         power: 96
         space: 280
     3:
-      ID: '5'
+      id: 5
       acceptedTags:
       - asset
       cost:
@@ -828,7 +828,7 @@ cards:
         power: 120
         space: 280
     4:
-      ID: '5'
+      id: 5
       acceptedTags:
       - asset
       cost:
@@ -857,7 +857,7 @@ cards:
         power: 120
         space: 320
     5:
-      ID: '5'
+      id: 5
       acceptedTags:
       - asset
       cost:
@@ -887,7 +887,7 @@ cards:
         space: 320
   6:
     1:
-      ID: '6'
+      id: 6
       acceptedTags:
       - cpu
       - gpu
@@ -918,7 +918,7 @@ cards:
         space: 2
   7:
     1:
-      ID: '7'
+      id: 7
       acceptedTags:
       - gpu
       cost:
@@ -948,7 +948,7 @@ cards:
         space: 6
   8:
     1:
-      ID: '8'
+      id: 8
       acceptedTags:
       - asic
       cost:
@@ -978,7 +978,7 @@ cards:
         space: 6
   9:
     1:
-      ID: '9'
+      id: 9
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -1007,7 +1007,7 @@ cards:
       title: CPU
       type: Mining
     2:
-      ID: '9'
+      id: 9
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -1036,7 +1036,7 @@ cards:
       title: CPU
       type: Mining
     3:
-      ID: '9'
+      id: 9
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -1065,7 +1065,7 @@ cards:
       title: CPU
       type: Mining
     4:
-      ID: '9'
+      id: 9
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -1094,7 +1094,7 @@ cards:
       title: CPU
       type: Mining
     5:
-      ID: '9'
+      id: 9
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -1124,7 +1124,7 @@ cards:
       type: Mining
   10:
     1:
-      ID: '10'
+      id: 10
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -1153,7 +1153,7 @@ cards:
       title: Classic GPU
       type: Mining
     2:
-      ID: '10'
+      id: 10
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -1182,7 +1182,7 @@ cards:
       title: Classic GPU
       type: Mining
     3:
-      ID: '10'
+      id: 10
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -1211,7 +1211,7 @@ cards:
       title: Classic GPU
       type: Mining
     4:
-      ID: '10'
+      id: 10
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -1240,7 +1240,7 @@ cards:
       title: Classic GPU
       type: Mining
     5:
-      ID: '10'
+      id: 10
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -1270,7 +1270,7 @@ cards:
       type: Mining
   11:
     1:
-      ID: '11'
+      id: 11
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -1298,7 +1298,7 @@ cards:
       title: ASIC Miner
       type: Mining
     2:
-      ID: '11'
+      id: 11
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -1326,7 +1326,7 @@ cards:
       title: ASIC Miner
       type: Mining
     3:
-      ID: '11'
+      id: 11
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -1354,7 +1354,7 @@ cards:
       title: ASIC Miner
       type: Mining
     4:
-      ID: '11'
+      id: 11
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -1382,7 +1382,7 @@ cards:
       title: ASIC Miner
       type: Mining
     5:
-      ID: '11'
+      id: 11
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -1411,7 +1411,7 @@ cards:
       type: Mining
   12:
     1:
-      ID: '12'
+      id: 12
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -1439,7 +1439,7 @@ cards:
       title: Intern Programmer
       type: Person
     2:
-      ID: '12'
+      id: 12
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -1467,7 +1467,7 @@ cards:
       title: Intern Programmer
       type: Person
     3:
-      ID: '12'
+      id: 12
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -1495,7 +1495,7 @@ cards:
       title: Intern Programmer
       type: Person
     4:
-      ID: '12'
+      id: 12
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -1523,7 +1523,7 @@ cards:
       title: Intern Programmer
       type: Person
     5:
-      ID: '12'
+      id: 12
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -1552,7 +1552,7 @@ cards:
       type: Person
   13:
     1:
-      ID: '13'
+      id: 13
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -1581,7 +1581,7 @@ cards:
       title: Junior Developer
       type: Person
     2:
-      ID: '13'
+      id: 13
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -1610,7 +1610,7 @@ cards:
       title: Junior Developer
       type: Person
     3:
-      ID: '13'
+      id: 13
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -1639,7 +1639,7 @@ cards:
       title: Junior Developer
       type: Person
     4:
-      ID: '13'
+      id: 13
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -1668,7 +1668,7 @@ cards:
       title: Junior Developer
       type: Person
     5:
-      ID: '13'
+      id: 13
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -1698,7 +1698,7 @@ cards:
       type: Person
   14:
     1:
-      ID: '14'
+      id: 14
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -1726,7 +1726,7 @@ cards:
       title: Freelance Consultant
       type: Person
     2:
-      ID: '14'
+      id: 14
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -1754,7 +1754,7 @@ cards:
       title: Freelance Consultant
       type: Person
     3:
-      ID: '14'
+      id: 14
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -1782,7 +1782,7 @@ cards:
       title: Freelance Consultant
       type: Person
     4:
-      ID: '14'
+      id: 14
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -1810,7 +1810,7 @@ cards:
       title: Freelance Consultant
       type: Person
     5:
-      ID: '14'
+      id: 14
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -1839,7 +1839,7 @@ cards:
       type: Person
   15:
     1:
-      ID: '15'
+      id: 15
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -1868,7 +1868,7 @@ cards:
       title: Senior Developer
       type: Person
     2:
-      ID: '15'
+      id: 15
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -1897,7 +1897,7 @@ cards:
       title: Senior Developer
       type: Person
     3:
-      ID: '15'
+      id: 15
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -1926,7 +1926,7 @@ cards:
       title: Senior Developer
       type: Person
     4:
-      ID: '15'
+      id: 15
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -1955,7 +1955,7 @@ cards:
       title: Senior Developer
       type: Person
     5:
-      ID: '15'
+      id: 15
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -1985,7 +1985,7 @@ cards:
       type: Person
   16:
     1:
-      ID: '16'
+      id: 16
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -2021,7 +2021,7 @@ cards:
       title: Technical Team Leader
       type: Person
     2:
-      ID: '16'
+      id: 16
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -2057,7 +2057,7 @@ cards:
       title: Technical Team Leader
       type: Person
     3:
-      ID: '16'
+      id: 16
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -2093,7 +2093,7 @@ cards:
       title: Technical Team Leader
       type: Person
     4:
-      ID: '16'
+      id: 16
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -2129,7 +2129,7 @@ cards:
       title: Technical Team Leader
       type: Person
     5:
-      ID: '16'
+      id: 16
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -2166,7 +2166,7 @@ cards:
       type: Person
   17:
     1:
-      ID: '17'
+      id: 17
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -2199,7 +2199,7 @@ cards:
       title: Project Architect
       type: Person
     2:
-      ID: '17'
+      id: 17
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -2232,7 +2232,7 @@ cards:
       title: Project Architect
       type: Person
     3:
-      ID: '17'
+      id: 17
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -2265,7 +2265,7 @@ cards:
       title: Project Architect
       type: Person
     4:
-      ID: '17'
+      id: 17
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -2298,7 +2298,7 @@ cards:
       title: Project Architect
       type: Person
     5:
-      ID: '17'
+      id: 17
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -2332,7 +2332,7 @@ cards:
       type: Person
   18:
     1:
-      ID: '18'
+      id: 18
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -2360,7 +2360,7 @@ cards:
       title: Black Hat Hacker
       type: Person
     2:
-      ID: '18'
+      id: 18
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -2388,7 +2388,7 @@ cards:
       title: Black Hat Hacker
       type: Person
     3:
-      ID: '18'
+      id: 18
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -2416,7 +2416,7 @@ cards:
       title: Black Hat Hacker
       type: Person
     4:
-      ID: '18'
+      id: 18
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -2444,7 +2444,7 @@ cards:
       title: Black Hat Hacker
       type: Person
     5:
-      ID: '18'
+      id: 18
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -2473,7 +2473,7 @@ cards:
       type: Person
   19:
     1:
-      ID: '19'
+      id: 19
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -2503,7 +2503,7 @@ cards:
       title: Solar Panels
       type: Power
     2:
-      ID: '19'
+      id: 19
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -2533,7 +2533,7 @@ cards:
       title: Solar Panels
       type: Power
     3:
-      ID: '19'
+      id: 19
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -2563,7 +2563,7 @@ cards:
       title: Solar Panels
       type: Power
     4:
-      ID: '19'
+      id: 19
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -2593,7 +2593,7 @@ cards:
       title: Solar Panels
       type: Power
     5:
-      ID: '19'
+      id: 19
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -2624,7 +2624,7 @@ cards:
       type: Power
   20:
     1:
-      ID: '20'
+      id: 20
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -2655,7 +2655,7 @@ cards:
       title: Black Market Batteries
       type: Power
     2:
-      ID: '20'
+      id: 20
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -2686,7 +2686,7 @@ cards:
       title: Black Market Batteries
       type: Power
     3:
-      ID: '20'
+      id: 20
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -2717,7 +2717,7 @@ cards:
       title: Black Market Batteries
       type: Power
     4:
-      ID: '20'
+      id: 20
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -2748,7 +2748,7 @@ cards:
       title: Black Market Batteries
       type: Power
     5:
-      ID: '20'
+      id: 20
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -2780,7 +2780,7 @@ cards:
       type: Power
   21:
     1:
-      ID: '21'
+      id: 21
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -2811,7 +2811,7 @@ cards:
       title: DIY Power Generator
       type: Power
     2:
-      ID: '21'
+      id: 21
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -2842,7 +2842,7 @@ cards:
       title: DIY Power Generator
       type: Power
     3:
-      ID: '21'
+      id: 21
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -2873,7 +2873,7 @@ cards:
       title: DIY Power Generator
       type: Power
     4:
-      ID: '21'
+      id: 21
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -2904,7 +2904,7 @@ cards:
       title: DIY Power Generator
       type: Power
     5:
-      ID: '21'
+      id: 21
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -2936,7 +2936,7 @@ cards:
       type: Power
   22:
     1:
-      ID: '22'
+      id: 22
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -2954,7 +2954,7 @@ cards:
         power: 0
         space: 10
         time: 0
-      flavorText: GRIDCONEEEEEEEEECT!
+      flavorText: GRidCONEEEEEEEEECT!
       image: grid-connector.jpg
       level: 1
       mechanics:
@@ -2970,11 +2970,11 @@ cards:
       rarityScore: '100'
       tags:
       - asset
-      title: GRID Connector
+      title: GRid Connector
       type: Misc
   23:
     1:
-      ID: '23'
+      id: 23
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -3013,7 +3013,7 @@ cards:
       type: Misc
   24:
     1:
-      ID: '24'
+      id: 24
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -3042,7 +3042,7 @@ cards:
       title: Day Trading
       type: Project
     2:
-      ID: '24'
+      id: 24
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -3071,7 +3071,7 @@ cards:
       title: Day Trading
       type: Project
     3:
-      ID: '24'
+      id: 24
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -3100,7 +3100,7 @@ cards:
       title: Day Trading
       type: Project
     4:
-      ID: '24'
+      id: 24
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -3129,7 +3129,7 @@ cards:
       title: Day Trading
       type: Project
     5:
-      ID: '24'
+      id: 24
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -3159,7 +3159,7 @@ cards:
       type: Project
   25:
     1:
-      ID: '25'
+      id: 25
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -3187,7 +3187,7 @@ cards:
       title: Outsourced Project
       type: Project
     2:
-      ID: '25'
+      id: 25
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -3215,7 +3215,7 @@ cards:
       title: Outsourced Project
       type: Project
     3:
-      ID: '25'
+      id: 25
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -3243,7 +3243,7 @@ cards:
       title: Outsourced Project
       type: Project
     4:
-      ID: '25'
+      id: 25
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -3271,7 +3271,7 @@ cards:
       title: Outsourced Project
       type: Project
     5:
-      ID: '25'
+      id: 25
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -3300,7 +3300,7 @@ cards:
       type: Project
   26:
     1:
-      ID: '26'
+      id: 26
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -3333,7 +3333,7 @@ cards:
       title: Profitable Dapp
       type: Project
     2:
-      ID: '26'
+      id: 26
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -3366,7 +3366,7 @@ cards:
       title: Profitable Dapp
       type: Project
     3:
-      ID: '26'
+      id: 26
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -3399,7 +3399,7 @@ cards:
       title: Profitable Dapp
       type: Project
     4:
-      ID: '26'
+      id: 26
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -3432,7 +3432,7 @@ cards:
       title: Profitable Dapp
       type: Project
     5:
-      ID: '26'
+      id: 26
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -3466,7 +3466,7 @@ cards:
       type: Project
   27:
     1:
-      ID: '27'
+      id: 27
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -3501,7 +3501,7 @@ cards:
       title: Mining Algorithm Optimization
       type: Project
     2:
-      ID: '27'
+      id: 27
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -3536,7 +3536,7 @@ cards:
       title: Mining Algorithm Optimization
       type: Project
     3:
-      ID: '27'
+      id: 27
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -3571,7 +3571,7 @@ cards:
       title: Mining Algorithm Optimization
       type: Project
     4:
-      ID: '27'
+      id: 27
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -3606,7 +3606,7 @@ cards:
       title: Mining Algorithm Optimization
       type: Project
     5:
-      ID: '27'
+      id: 27
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -3642,7 +3642,7 @@ cards:
       type: Project
   28:
     1:
-      ID: '28'
+      id: 28
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -3670,7 +3670,7 @@ cards:
       title: Initial Coin Offering
       type: Project
     2:
-      ID: '28'
+      id: 28
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -3698,7 +3698,7 @@ cards:
       title: Initial Coin Offering
       type: Project
     3:
-      ID: '28'
+      id: 28
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -3726,7 +3726,7 @@ cards:
       title: Initial Coin Offering
       type: Project
     4:
-      ID: '28'
+      id: 28
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -3754,7 +3754,7 @@ cards:
       title: Initial Coin Offering
       type: Project
     5:
-      ID: '28'
+      id: 28
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -3783,7 +3783,7 @@ cards:
       type: Project
   29:
     1:
-      ID: '29'
+      id: 29
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -3821,7 +3821,7 @@ cards:
       title: Rent Computing Power
       type: Project
     2:
-      ID: '29'
+      id: 29
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -3859,7 +3859,7 @@ cards:
       title: Rent Computing Power
       type: Project
     3:
-      ID: '29'
+      id: 29
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -3897,7 +3897,7 @@ cards:
       title: Rent Computing Power
       type: Project
     4:
-      ID: '29'
+      id: 29
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -3935,7 +3935,7 @@ cards:
       title: Rent Computing Power
       type: Project
     5:
-      ID: '29'
+      id: 29
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -3974,7 +3974,7 @@ cards:
       type: Project
   30:
     1:
-      ID: '30'
+      id: 30
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -4007,7 +4007,7 @@ cards:
       title: Coin Staking
       type: Project
     2:
-      ID: '30'
+      id: 30
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -4040,7 +4040,7 @@ cards:
       title: Coin Staking
       type: Project
     3:
-      ID: '30'
+      id: 30
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -4073,7 +4073,7 @@ cards:
       title: Coin Staking
       type: Project
     4:
-      ID: '30'
+      id: 30
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -4106,7 +4106,7 @@ cards:
       title: Coin Staking
       type: Project
     5:
-      ID: '30'
+      id: 30
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -4140,7 +4140,7 @@ cards:
       type: Project
   31:
     1:
-      ID: '31'
+      id: 31
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -4174,7 +4174,7 @@ cards:
       title: Decentralized Protocol Development
       type: Project
     2:
-      ID: '31'
+      id: 31
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -4208,7 +4208,7 @@ cards:
       title: Decentralized Protocol Development
       type: Project
     3:
-      ID: '31'
+      id: 31
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -4242,7 +4242,7 @@ cards:
       title: Decentralized Protocol Development
       type: Project
     4:
-      ID: '31'
+      id: 31
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -4276,7 +4276,7 @@ cards:
       title: Decentralized Protocol Development
       type: Project
     5:
-      ID: '31'
+      id: 31
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -4311,7 +4311,7 @@ cards:
       type: Project
   32:
     1:
-      ID: '32'
+      id: 32
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -4340,7 +4340,7 @@ cards:
       title: Consensus Improvement
       type: Project
     2:
-      ID: '32'
+      id: 32
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -4369,7 +4369,7 @@ cards:
       title: Consensus Improvement
       type: Project
     3:
-      ID: '32'
+      id: 32
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -4398,7 +4398,7 @@ cards:
       title: Consensus Improvement
       type: Project
     4:
-      ID: '32'
+      id: 32
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -4427,7 +4427,7 @@ cards:
       title: Consensus Improvement
       type: Project
     5:
-      ID: '32'
+      id: 32
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -4457,7 +4457,7 @@ cards:
       type: Project
   33:
     1:
-      ID: '33'
+      id: 33
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -4485,7 +4485,7 @@ cards:
       title: Holographic GPU
       type: Mining
     2:
-      ID: '33'
+      id: 33
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -4513,7 +4513,7 @@ cards:
       title: Holographic GPU
       type: Mining
     3:
-      ID: '33'
+      id: 33
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -4541,7 +4541,7 @@ cards:
       title: Holographic GPU
       type: Mining
     4:
-      ID: '33'
+      id: 33
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -4569,7 +4569,7 @@ cards:
       title: Holographic GPU
       type: Mining
     5:
-      ID: '33'
+      id: 33
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -4598,7 +4598,7 @@ cards:
       type: Mining
   34:
     1:
-      ID: '34'
+      id: 34
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -4627,7 +4627,7 @@ cards:
       title: Corporate-grade GPU
       type: Mining
     2:
-      ID: '34'
+      id: 34
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -4656,7 +4656,7 @@ cards:
       title: Corporate-grade GPU
       type: Mining
     3:
-      ID: '34'
+      id: 34
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -4685,7 +4685,7 @@ cards:
       title: Corporate-grade GPU
       type: Mining
     4:
-      ID: '34'
+      id: 34
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -4714,7 +4714,7 @@ cards:
       title: Corporate-grade GPU
       type: Mining
     5:
-      ID: '34'
+      id: 34
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -4744,7 +4744,7 @@ cards:
       type: Mining
   35:
     1:
-      ID: '35'
+      id: 35
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -4772,7 +4772,7 @@ cards:
       title: 3D Printed GPU
       type: Mining
     2:
-      ID: '35'
+      id: 35
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -4800,7 +4800,7 @@ cards:
       title: 3D Printed GPU
       type: Mining
     3:
-      ID: '35'
+      id: 35
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -4828,7 +4828,7 @@ cards:
       title: 3D Printed GPU
       type: Mining
     4:
-      ID: '35'
+      id: 35
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -4856,7 +4856,7 @@ cards:
       title: 3D Printed GPU
       type: Mining
     5:
-      ID: '35'
+      id: 35
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -4885,7 +4885,7 @@ cards:
       type: Mining
   36:
     1:
-      ID: '36'
+      id: 36
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -4920,7 +4920,7 @@ cards:
       title: White Hat Hacker
       type: Person
     2:
-      ID: '36'
+      id: 36
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -4955,7 +4955,7 @@ cards:
       title: White Hat Hacker
       type: Person
     3:
-      ID: '36'
+      id: 36
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -4990,7 +4990,7 @@ cards:
       title: White Hat Hacker
       type: Person
     4:
-      ID: '36'
+      id: 36
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -5025,7 +5025,7 @@ cards:
       title: White Hat Hacker
       type: Person
     5:
-      ID: '36'
+      id: 36
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -5061,7 +5061,7 @@ cards:
       type: Person
   37:
     1:
-      ID: '37'
+      id: 37
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -5089,7 +5089,7 @@ cards:
       title: Prediction Market Participation
       type: Project
     2:
-      ID: '37'
+      id: 37
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -5117,7 +5117,7 @@ cards:
       title: Prediction Market Participation
       type: Project
     3:
-      ID: '37'
+      id: 37
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -5145,7 +5145,7 @@ cards:
       title: Prediction Market Participation
       type: Project
     4:
-      ID: '37'
+      id: 37
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -5173,7 +5173,7 @@ cards:
       title: Prediction Market Participation
       type: Project
     5:
-      ID: '37'
+      id: 37
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -5202,7 +5202,7 @@ cards:
       type: Project
   38:
     1:
-      ID: '38'
+      id: 38
       acceptedTags:
       - asset
       cost:
@@ -5231,7 +5231,7 @@ cards:
         power: 120
         space: 320
     2:
-      ID: '38'
+      id: 38
       acceptedTags:
       - asset
       cost:
@@ -5260,7 +5260,7 @@ cards:
         power: 120
         space: 360
     3:
-      ID: '38'
+      id: 38
       acceptedTags:
       - asset
       cost:
@@ -5289,7 +5289,7 @@ cards:
         power: 144
         space: 360
     4:
-      ID: '38'
+      id: 38
       acceptedTags:
       - asset
       cost:
@@ -5318,7 +5318,7 @@ cards:
         power: 144
         space: 400
     5:
-      ID: '38'
+      id: 38
       acceptedTags:
       - asset
       cost:
@@ -5348,7 +5348,7 @@ cards:
         space: 400
   39:
     1:
-      ID: '39'
+      id: 39
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -5384,7 +5384,7 @@ cards:
       title: Corporate Efficiency Officer
       type: Person
     2:
-      ID: '39'
+      id: 39
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -5420,7 +5420,7 @@ cards:
       title: Corporate Efficiency Officer
       type: Person
     3:
-      ID: '39'
+      id: 39
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -5456,7 +5456,7 @@ cards:
       title: Corporate Efficiency Officer
       type: Person
     4:
-      ID: '39'
+      id: 39
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -5492,7 +5492,7 @@ cards:
       title: Corporate Efficiency Officer
       type: Person
     5:
-      ID: '39'
+      id: 39
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -5529,7 +5529,7 @@ cards:
       type: Person
   40:
     1:
-      ID: '40'
+      id: 40
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -5562,7 +5562,7 @@ cards:
       title: Corporate Executive
       type: Person
     2:
-      ID: '40'
+      id: 40
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -5595,7 +5595,7 @@ cards:
       title: Corporate Executive
       type: Person
     3:
-      ID: '40'
+      id: 40
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -5628,7 +5628,7 @@ cards:
       title: Corporate Executive
       type: Person
     4:
-      ID: '40'
+      id: 40
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -5661,7 +5661,7 @@ cards:
       title: Corporate Executive
       type: Person
     5:
-      ID: '40'
+      id: 40
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -5695,7 +5695,7 @@ cards:
       type: Person
   41:
     1:
-      ID: '41'
+      id: 41
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -5730,7 +5730,7 @@ cards:
       title: Day Trader
       type: Person
     2:
-      ID: '41'
+      id: 41
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -5765,7 +5765,7 @@ cards:
       title: Day Trader
       type: Person
     3:
-      ID: '41'
+      id: 41
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -5800,7 +5800,7 @@ cards:
       title: Day Trader
       type: Person
     4:
-      ID: '41'
+      id: 41
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -5835,7 +5835,7 @@ cards:
       title: Day Trader
       type: Person
     5:
-      ID: '41'
+      id: 41
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -5871,7 +5871,7 @@ cards:
       type: Person
   42:
     1:
-      ID: '42'
+      id: 42
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -5906,7 +5906,7 @@ cards:
       title: Information Dealer
       type: Person
     2:
-      ID: '42'
+      id: 42
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -5941,7 +5941,7 @@ cards:
       title: Information Dealer
       type: Person
     3:
-      ID: '42'
+      id: 42
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -5976,7 +5976,7 @@ cards:
       title: Information Dealer
       type: Person
     4:
-      ID: '42'
+      id: 42
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -6011,7 +6011,7 @@ cards:
       title: Information Dealer
       type: Person
     5:
-      ID: '42'
+      id: 42
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -6047,7 +6047,7 @@ cards:
       type: Person
   43:
     1:
-      ID: '43'
+      id: 43
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -6084,7 +6084,7 @@ cards:
       type: Misc
   44:
     1:
-      ID: '44'
+      id: 44
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -6119,7 +6119,7 @@ cards:
       title: Hardware Tinkerer
       type: Person
     2:
-      ID: '44'
+      id: 44
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -6154,7 +6154,7 @@ cards:
       title: Hardware Tinkerer
       type: Person
     3:
-      ID: '44'
+      id: 44
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -6189,7 +6189,7 @@ cards:
       title: Hardware Tinkerer
       type: Person
     4:
-      ID: '44'
+      id: 44
       acceptedTags: []
       bonus:
         containerSpace: 0
@@ -6224,7 +6224,7 @@ cards:
       title: Hardware Tinkerer
       type: Person
     5:
-      ID: '44'
+      id: 44
       acceptedTags: []
       bonus:
         containerSpace: 0

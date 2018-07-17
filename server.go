@@ -40,9 +40,42 @@ func main() {
 	}
 	db.LogFunc = logger.Infof
 
+	http.Handle("/", buildRouter(logger, db))
+
+	address := fmt.Sprintf(":%v", app.Config.ServerPort)
+	logger.Infof("server %v is started at %v\n", app.Version, address)
+	panic(http.ListenAndServe(address, nil))
+}
+
+func buildRouter(logger *logrus.Logger, db *dbx.DB) *routing.Router {
+	router := routing.New()
+
+	router.To("GET,HEAD", "/ping", func(c *routing.Context) error {
+		c.Abort()
+		return c.Write("OK " + app.Version)
+	})
+
+	router.Use(
+		app.Init(logger),
+		content.TypeNegotiator("text/html"),
+		cors.Handler(cors.Options{
+			AllowOrigins: "*",
+			AllowHeaders: "*",
+			AllowMethods: "*",
+		}),
+		app.Transactional(db),
+	)
+
+	rg := router.Group("")
+	endpoint.ServeCouponResource(rg, service.NewCouponService(dao.NewCouponDAO()), service.NewCardService(dao.NewCardDAO(getCryptageCards())))
+
+	return router
+}
+
+func getCryptageCards() app.Cryptage {
 	var cryptage app.Cryptage
 	cardsYaml, _ := ioutil.ReadFile(app.Config.Cards)
-	err = yaml.Unmarshal(cardsYaml, &cryptage)
+	yaml.Unmarshal(cardsYaml, &cryptage)
 
 	for i := 0; i < len(cryptage.Cards); i++ {
 		for j := 1; j <= len(cryptage.Cards[uint(i)]); j++ {
@@ -53,35 +86,5 @@ func main() {
 		delete(cryptage.Cards[uint(i)], uint(len(cryptage.Cards[uint(i)])-1))
 	}
 
-	http.Handle("/", buildRouter(logger, db, cryptage))
-
-	// start the server
-	address := fmt.Sprintf(":%v", app.Config.ServerPort)
-	logger.Infof("server %v is started at %v\n", app.Version, address)
-	panic(http.ListenAndServe(address, nil))
-}
-
-func buildRouter(logger *logrus.Logger, db *dbx.DB, cryptage app.Cryptage) *routing.Router {
-	router := routing.New()
-
-	router.To("GET,HEAD", "/ping", func(c *routing.Context) error {
-		c.Abort()  // skip all other middlewares/handlers
-		return c.Write("OK " + app.Version)
-	})
-
-	router.Use(
-		app.Init(logger),
-		content.TypeNegotiator(content.JSON),
-		cors.Handler(cors.Options{
-			AllowOrigins: "*",
-			AllowHeaders: "*",
-			AllowMethods: "*",
-		}),
-		app.Transactional(db),
-	)
-
-	rg := router.Group("")
-	endpoint.ServeCouponResource(rg, service.NewCouponService(dao.NewCouponDAO(), dao.NewUserDAO(), dao.NewCardDAO(cryptage)), service.NewUserService(dao.NewUserDAO()))
-
-	return router
+	return cryptage
 }

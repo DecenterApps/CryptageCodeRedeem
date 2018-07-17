@@ -6,13 +6,13 @@ import (
 )
 
 type CardDAO struct {
-	cards map[uint]map[uint]model.Card
+	cards map[uint]map[uint]*model.Card
 }
 
 func NewCardDAO(cryptage app.Cryptage) *CardDAO {
 	return &CardDAO{cryptage.Cards}
 }
 
-func (dao *CardDAO) Get(rs app.RequestScope, id int) (model.Card, error) {
+func (dao *CardDAO) Get(rs app.RequestScope, id int) (*model.Card, error) {
 	return dao.cards[uint(id)][1], nil
 }
