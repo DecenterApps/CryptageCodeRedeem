@@ -8,7 +8,7 @@ import (
 
 type couponDAO interface {
 	Get(rs app.RequestScope, id int) (*model.Coupon, error)
-	GetByToken(rs app.RequestScope, token string) (*dao.CouponDB, error)
+	GetByToken(rs app.RequestScope, token string) (*dao.Coupon, error)
 	Count(rs app.RequestScope) (int, error)
 	Query(rs app.RequestScope, offset, limit int) ([]model.Coupon, error)
 	Create(rs app.RequestScope, coupon *model.Coupon) error
