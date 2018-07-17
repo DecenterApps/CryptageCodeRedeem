@@ -31,35 +31,10 @@ func (dao *CouponDAO) GetByToken(rs app.RequestScope, token string) (*Coupon, er
 	return &coupon, err
 }
 
-func (dao *CouponDAO) Create(rs app.RequestScope, coupon *model.Coupon) error {
-	coupon.Id = 0
-	return rs.Tx().Model(coupon).Insert()
-}
-
 func (dao *CouponDAO) Update(rs app.RequestScope, id int, coupon *model.Coupon) error {
 	if _, err := dao.Get(rs, id); err != nil {
 		return err
 	}
 	coupon.Id = id
 	return rs.Tx().Model(coupon).Exclude("Id").Update()
-}
-
-func (dao *CouponDAO) Delete(rs app.RequestScope, id int) error {
-	coupon, err := dao.Get(rs, id)
-	if err != nil {
-		return err
-	}
-	return rs.Tx().Model(coupon).Delete()
-}
-
-func (dao *CouponDAO) Count(rs app.RequestScope) (int, error) {
-	var count int
-	err := rs.Tx().Select("COUNT(*)").From("coupon").Row(&count)
-	return count, err
-}
-
-func (dao *CouponDAO) Query(rs app.RequestScope, offset, limit int) ([]model.Coupon, error) {
-	coupons := []model.Coupon{}
-	err := rs.Tx().Select().OrderBy("id").Offset(int64(offset)).Limit(int64(limit)).All(&coupons)
-	return coupons, err
 }

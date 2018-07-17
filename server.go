@@ -53,7 +53,6 @@ func main() {
 		delete(cryptage.Cards[uint(i)], uint(len(cryptage.Cards[uint(i)])-1))
 	}
 
-	// wire up API routing
 	http.Handle("/", buildRouter(logger, db, cryptage))
 
 	// start the server
@@ -82,7 +81,7 @@ func buildRouter(logger *logrus.Logger, db *dbx.DB, cryptage app.Cryptage) *rout
 	)
 
 	rg := router.Group("")
-	endpoint.ServeCouponResource(rg, service.NewCouponService(dao.NewCouponDAO(), dao.NewUserDAO(), dao.NewCardDAO(cryptage)))
+	endpoint.ServeCouponResource(rg, service.NewCouponService(dao.NewCouponDAO(), dao.NewUserDAO(), dao.NewCardDAO(cryptage)), service.NewUserService(dao.NewUserDAO()))
 
 	return router
 }
