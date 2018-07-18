@@ -77,7 +77,7 @@
 </div>
 {{end}}
 
-{{if eq .Error ""}}
+{{if and (eq .Error "") (not .Done)}}
 <div class="container">
     <h1>Congratulations!</h1>
     <p>
@@ -88,10 +88,6 @@
         Once the game launches on the mainnet, we'll send the rare card as an ERC721 token to your ETH address and
         notify you about it via email.
     </p>
-
-    <div>
-        {{.Card}}
-    </div>
 
     <div class="card-wrapper">
         <div class="inner-wrapper">
@@ -179,81 +175,71 @@
 
             <div class="cost" data-name="Requires">
                 <div data-name="SPACE" class="orb space">
-                    {{.Card.Costs.Space}}
+                    {{.Card.Cost.Space}}
                 </div>
-                {{ if gt .Card.Costs.Power 0 }}
+                {{ if gt .Card.Cost.Power 0 }}
                 <div data-name="POWER" class="orb power">
-                    {{.Card.FormatNumber .Card.Costs.Power}}
+                    {{.Card.FormatNumber .Card.Cost.Power}}
                 </div>
                 {{ end }}
-                {{ if gt .Card.Costs.Funds 0 }}
+                {{ if gt .Card.Cost.Funds 0 }}
                 <div data-name="FUNDS" class="orb funds">
-                    {{.Card.FormatNumber .Card.Costs.Funds}}
+                    {{.Card.FormatNumber .Card.Cost.Funds}}
                 </div>
                 {{ end }}
-                {{ if gt .Card.Costs.Level 1 }}
+                {{ if gt .Card.Cost.Level 1 }}
                 <div data-name="LEVEL" class="orb level">
-                    {{.Card.FormatNumber .Card.Costs.Level}}
+                    {{.Card.FormatNumber .Card.Cost.Level}}
                 </div>
                 {{ end }}
-                {{ if gt .Card.Costs.Development 0 }}
+                {{ if gt .Card.Cost.Development 0 }}
                 <div data-name="DEV" class="orb development">
-                    {{.Card.FormatNumber .Card.Costs.Development}}
+                    {{.Card.FormatNumber .Card.Cost.Development}}
                 </div>
                 {{ end }}
             </div>
 
-            <div class="gains" data-name="Gains">
-                {{ if gt .Card.Gains.Space 0 }}
+            <div class="gains" data-name="Values">
+                {{ if gt .Card.Values.Space 0 }}
                 <div data-name="SPACE" class="orb space">
-                    {{.Card.FormatNumber .Card.Gains.Space}}
+                    {{.Card.FormatNumber .Card.Values.Space}}
                 </div>
                 {{ end }}
-                {{ if gt .Card.Gains.Power 0 }}
+                {{ if gt .Card.Values.Power 0 }}
                 <div data-name="POWER" class="orb power">
-                    {{.Card.FormatNumber .Card.Gains.Power}}
+                    {{.Card.FormatNumber .Card.Values.Power}}
                 </div>
                 {{ end }}
-                {{ if gt .Card.Gains.Funds 0 }}
+                {{ if gt .Card.Values.Funds 0 }}
                 <div data-name="FUNDS" class="orb funds">
-                    {{.Card.FormatNumber .Card.Gains.Funds}}
+                    {{.Card.FormatNumber .Card.Values.Funds}}
                 </div>
                 {{ end }}
-                {{ if gt .Card.Gains.FundsPerBlock 0 }}
+                {{ if gt .Card.Values.FundsPerBlock 0 }}
                 <div data-name="FPB" class="orb funds">
-                    {{.Card.FormatNumber .Card.Gains.FundsPerBlock}}
+                    {{.Card.FormatNumber .Card.Values.FundsPerBlock}}
                 </div>
                 {{ end }}
-                {{ if eq .Card.Id 43 }}
-                <div data-name="FUNDS" class="orb funds">
-                    {{.Card.FormatNumber .Card.Gains.MultiplierFunds}}
-                </div>
-                {{ end }}
-                {{ if gt .Card.Gains.Xp 0 }}
+                {{ if gt .Card.Values.Xp 0 }}
                 <div data-name="XP" class="orb xp">
-                    {{.Card.FormatNumber .Card.Gains.Xp}}
+                    {{.Card.FormatNumber .Card.Values.Xp}}
                 </div>
                 {{ end }}
-                {{ if gt .Card.Gains.Power 0 }}
-                <div data-name="POWER" class="orb power">
-                    {{.Card.FormatNumber .Card.Gains.Power}}
-                </div>
-                {{ end }}
-                {{ if gt .Card.Gains.Development 0 }}
+                {{ if gt .Card.Values.Development 0 }}
                 <div data-name="DEV" class="orb development">
-                    {{.Card.FormatNumber .Card.Gains.Development}}
+                    {{.Card.FormatNumber .Card.Values.Development}}
                 </div>
                 {{ end }}
 
                 <div class="type">Card type: {{.Card.GetRarityLevel}}</div>
 
                 <div class="description">
-                    {{ if not (eq .Card.MechanicsText "") }}
-                    card.stats.mechanicsText && <p class="mechanics">{{.Card.MechanicsText}}</p>
+                    {{ if not (eq .Card.Mechanics "") }}
+                    <p class="mechanics">{{.Card.Mechanics}}</p>
                     {{ end }}
                         
-                    {{ if not (eq .Card.FlavorText "") }}
-                    card.stats.flavorText && <p class="flavor">&ldquo;{{.Card.FlavorText}}&ldquo;</p>
+                    {{ if not (eq .Card.Flavor "") }}
+                    <p class="flavor">&ldquo;{{.Card.Flavor}}&ldquo;</p>
                     {{ end }}
                 </div>
             </div>
@@ -353,6 +339,25 @@
 
         </button>
     </form>
+</div>
+{{end}}
+{{if and (eq .Error "") (.Done)}}
+<div class="container error">
+    <div>
+        <svg width="70" height="68" viewBox="0 0 70 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M64.1084 28.2504C62.5467 28.2504 61.2808 29.5365 61.2808 31.1229V34.0162C61.2766 41.5633 58.3795 48.6571 53.1233 53.9905C47.871 59.3201 40.8915 62.2546 33.4685 62.2546C33.463 62.2546 33.4576 62.2546 33.4521 62.2546C18.1161 62.2457 5.64649 49.5636 5.65524 33.9837C5.65948 26.4367 8.55655 19.3429 13.8128 14.0092C19.0652 8.67964 26.0448 5.74513 33.4677 5.74513C33.4731 5.74513 33.4786 5.74513 33.4841 5.74513C37.4041 5.74735 41.2073 6.57043 44.788 8.19116C46.2148 8.837 47.8859 8.18546 48.5216 6.7364C49.1571 5.28734 48.5162 3.58925 47.0897 2.9434C42.7808 0.992939 38.2044 0.00263895 33.4872 0C33.4801 0 33.4747 0 33.4675 0C24.5358 0 16.1361 3.53175 9.81614 9.94467C3.49126 16.3626 0.00520083 24.8988 5.51319e-06 33.9806C-0.00505308 43.0622 3.47116 51.6024 9.78893 58.0278C16.1067 64.4533 24.5092 67.9947 33.4488 68C33.4558 68 33.4614 68 33.4685 68C42.4002 68 50.7999 64.4684 57.1199 58.0553C63.4448 51.6373 66.9308 43.1011 66.936 34.0178V31.1231C66.936 29.5365 65.6702 28.2504 64.1084 28.2504Z" fill="#FF9D14"/>
+            <path d="M47.7234 0.841269C46.6192 -0.280423 44.8288 -0.280423 43.7246 0.841269L12.0196 33.05L4.82696 25.7431C3.72282 24.6212 1.93235 24.6212 0.828208 25.7431C-0.276069 26.8649 -0.276069 28.6837 0.828208 29.8055L10.0204 39.1438C10.5724 39.7048 11.2962 39.9852 12.0199 39.9852C12.7435 39.9852 13.4672 39.7048 14.0194 39.1438L47.7234 4.90372C48.8277 3.78189 48.8277 1.9631 47.7234 0.841269Z" transform="translate(21.4485 3.13062)" fill="#FF9D14"/>
+        </svg>
+    </div>
+    <h1>All done!</h1>
+    <p>
+        You will receive your rare <b>Cryptage Origins</b> card  as soon as the game launches on the mainnet.
+    </p>
+
+    <p>
+        And we'll also let you know via email,
+        just so we make sure you don't miss it.
+    </p>
 </div>
 {{end}}
 </body>

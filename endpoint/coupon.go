@@ -49,7 +49,7 @@ func (r *couponResource) get(c *routing.Context) error {
 		return tmpl.Execute(c.Response, response{Error: "used"})
 	}
 
-	card, _ := r.cardService.Get(app.GetRequestScope(c), coupon.Id)
+	card, _ := r.cardService.Get(app.GetRequestScope(c), coupon.CardId)
 
 	if card == nil {
 		return tmpl.Execute(c.Response, response{Error: "invalid"})
@@ -61,7 +61,7 @@ func (r *couponResource) get(c *routing.Context) error {
 func (r *couponResource) update(c *routing.Context) error {
 	rs := app.GetRequestScope(c)
 
-	tmpl := template.Must(template.ParseFiles("./front/src/confirmation.html"))
+	tmpl := template.Must(template.ParseFiles("./front/src/index.html"))
 	coupon, err := r.couponService.GetByToken(rs, c.Param("token"))
 	if err != nil {
 		return tmpl.Execute(c.Response, response{Error: "invalid"})
