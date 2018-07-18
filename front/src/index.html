@@ -174,9 +174,11 @@
             <div class="card-type">{{.Card.Type}}</div>
 
             <div class="cost" data-name="Requires">
-                <div data-name="SPACE" class="orb space">
+                {{ if gt .Card.Cost.Space 0 }}
+                    <div data-name="SPACE" class="orb space">
                     {{.Card.Cost.Space}}
-                </div>
+                    </div>
+                {{ end }}
                 {{ if gt .Card.Cost.Power 0 }}
                 <div data-name="POWER" class="orb power">
                     {{.Card.FormatNumber .Card.Cost.Power}}
