@@ -76,5 +76,6 @@ func (r *couponResource) update(c *routing.Context) error {
 		return tmpl.Execute(c.Response, response{Error: "error"})
 	}
 
-	return tmpl.Execute(c.Response, response{Done: true})
+	card, _ := r.cardService.Get(app.GetRequestScope(c), coupon.Id)
+	return tmpl.Execute(c.Response, response{Coupon: coupon, Card: card, Done: true})
 }
