@@ -50,6 +50,11 @@ func (r *couponResource) get(c *routing.Context) error {
 	}
 
 	card, _ := r.cardService.Get(app.GetRequestScope(c), coupon.Id)
+
+	if card == nil {
+		return tmpl.Execute(c.Response, response{Error: "invalid"})
+	}
+
 	return tmpl.Execute(c.Response, response{Coupon: coupon, Card: card})
 }
 

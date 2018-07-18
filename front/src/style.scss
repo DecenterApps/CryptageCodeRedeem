@@ -1,3 +1,7 @@
+
+$font-primary: 'Montserrat', sans-serif;
+$font-secondary: 'Baloo', sans-serif;
+
 html, body {
   padding: 0;
   margin: 0;
@@ -11,7 +15,7 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
-  font-family: 'Montserrat', sans-serif;
+  font-family: $font-primary;
 }
 
 .logo {
@@ -28,7 +32,7 @@ body {
   color: white;
 
   h1 {
-    font-family: 'Baloo', sans-serif;
+    font-family: $font-secondary;
     font-size: 32px;
     text-transform: uppercase;
   }
@@ -56,7 +60,7 @@ body {
       outline: none;
       border: 0;
       border-bottom: 1px solid #7B77D2;
-      font-family: 'Baloo', sans-serif;
+      font-family: $font-secondary;
       box-shadow: 0 6px 6px -3px rgba(#36265F, .8);
     }
     :-ms-input-placeholder {
@@ -83,7 +87,7 @@ body {
     position: relative;
     padding: 0;
     font-size: 14px;
-    font-family: 'Baloo', sans-serif;
+    font-family: $font-secondary;
     text-shadow: 0px 0px 5px #9B01C1;
     &:hover {
       color: darken(white, 15);
@@ -101,22 +105,196 @@ body {
     margin-top: 20px;
     display: flex;
     justify-content: center;
-    font-family: 'Baloo', sans-serif;
+    font-family: $font-secondary;
     .inner-wrapper {
       position: relative;
+
+      .rarity-overlay {
+        &.blue {
+          position: absolute;
+          top: -25px;
+          left: -26px;
+          width: 236px;
+          height: 364px;
+          background-size: 100%;
+          background: url("/freeCards/assets/blue-rarity-border.png") no-repeat;
+        }
+        &.gold {
+          position: absolute;
+          top: -19px;
+          left: -23px;
+          width: 236px;
+          height: 364px;
+          background-size: 100%;
+          transform: scale(1.03);
+          background: url("/freeCards/assets/gold-rarity-border.png") no-repeat;
+        }
+        &.purple {
+          position: absolute;
+          top: -22px;
+          left: -24px;
+          width: 343px;
+          height: 364px;
+          background-size: cover;
+          transform: scale(1.02);
+          background: url("/freeCards/assets/purple-rarity-border.png") no-repeat;
+        }
+      }
+
       .card-title, .card-type {
         position: absolute;
         width: 164px;
         left: 19px;
         text-align: center;
         text-transform: capitalize;
-        bottom: 57px;
+        bottom: 55px;
       }
 
       .card-type {
         bottom: 27px;
         font-size: 14px;
       }
+
+      .cost, .gains {
+        position: absolute;
+        top: 20px !important;
+        z-index: 3;
+
+        $orb-radius: 16px;
+
+        &:before,
+        &.cost .orb:before,
+        &.gains .orb:after {
+          content: attr(data-name);
+          text-transform: capitalize;
+          height: 33px;
+          position: absolute;
+          top: 0px;
+          font-size: 14px;
+          line-height: 35px;
+        }
+        &.cost:before {
+          left: -30px;
+          top: -55px;
+          width: 80px;
+          height: 60px;
+          line-height: 100px;
+          text-align: left;
+          font-size: 14px;
+          padding-left: 20px;
+          box-sizing: border-box;
+        }
+        &.gains:before {
+          right: -22px;
+          top: -20px;
+          width: 80px;
+          height: 60px;
+          text-align: left;
+          font-size: 14px;
+          padding-left: 20px;
+          box-sizing: border-box;
+        }
+        &.cost .orb:before {
+          padding: 0 15px 0 40px;
+          right: 28px;
+        }
+        &.gains .orb:after {
+          padding: 0 40px 0 15px;
+          left: 28px;
+        }
+        &.cost {
+          left: -54px !important;
+
+          .orb {
+            border-bottom-right-radius: $orb-radius;
+            border-top-right-radius: $orb-radius;
+          }
+        }
+        &.gains {
+          left: auto;
+          right: -46px !important;
+
+          .orb {
+            border-bottom-left-radius: $orb-radius;
+            border-top-left-radius: $orb-radius;
+          }
+        }
+        width: 40px;
+        .orb {
+          position: relative;
+          width: 47px;
+          height: 33px;
+          padding: 6px 0;
+          margin: 10px 0;
+          line-height: 22px;
+          color: white;
+          font-size: 14px;
+          font-family: $font-secondary;
+          text-align: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          box-sizing: border-box;
+        }
+        &.gains {
+          .orb.funds {
+            background: linear-gradient(90deg, #FF9D14 24.31%, rgba(255, 157, 20, 0) 100%);
+          }
+          .orb.power {
+            background: linear-gradient(90deg, #BC0924 24.31%, rgba(189, 9, 37, 0) 100%);
+          }
+          .orb.xp {
+            background: linear-gradient(90deg, #2AD100 24.31%, rgba(42, 209, 0, 0) 100%);
+          }
+          .orb.space {
+            background: linear-gradient(90deg, #3CC8CC 24.31%, rgba(60, 200, 204, 0) 100%);
+          }
+          .orb.development {
+            background: linear-gradient(90deg, #9B01C1 24.31%, rgba(155, 1, 193, 0) 100%);
+          }
+        }
+        &.cost {
+          .orb.funds {
+            background: linear-gradient(-90deg, #FF9D14 24.31%, rgba(255, 157, 20, 0) 100%);
+          }
+          .orb.space {
+            background: linear-gradient(-90deg, #3CC8CC 24.31%, rgba(60, 200, 204, 0) 100%);
+          }
+          .orb.level {
+            background: linear-gradient(-90deg, #2AD100 24.31%, rgba(42, 209, 0, 0) 100%);
+          }
+          .orb.development {
+            background: linear-gradient(-90deg, #9B01C1 24.31%, rgba(155, 1, 193, 0) 100%);
+          }
+          .orb.power {
+            background: linear-gradient(-90deg, #BC0924 24.31%, rgba(189, 9, 37, 0) 100%);
+          }
+        }
+
+        .description {
+          width: 190px;
+          text-align: left;
+          font-size: 12px;
+          margin-top: 20px;
+
+          .mechanics {
+            margin-bottom: 9px;
+          }
+
+          .flavor {
+            font-family: $font-primary;
+            font-style: italic;
+            opacity: 0.7;
+          }
+        }
+        .type {
+          width: 120px;
+          text-align: left;
+          font-size: 14px;
+          padding-left: 2px;
+        }
+      }
+
     }
   }
 
