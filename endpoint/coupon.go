@@ -6,7 +6,6 @@ import (
 	"github.com/go-ozzo/ozzo-routing"
 	"github.com/DecenterApps/CryptageCodeRedeem/app"
 	"github.com/DecenterApps/CryptageCodeRedeem/model"
-	"net/http"
 )
 
 type (
@@ -29,6 +28,7 @@ type (
 		Coupon *model.Coupon
 		Card   *model.Card
 		Error  string
+		Done   bool
 	}
 )
 
@@ -56,13 +56,14 @@ func (r *couponResource) get(c *routing.Context) error {
 func (r *couponResource) update(c *routing.Context) error {
 	rs := app.GetRequestScope(c)
 
+	tmpl := template.Must(template.ParseFiles("./front/src/confirmation.html"))
 	coupon, err := r.couponService.GetByToken(rs, c.Param("token"))
 	if err != nil {
-		return err
+		return tmpl.Execute(c.Response, response{Error: "invalid"})
 	}
 
 	if coupon.Email != nil && coupon.Address != nil {
-		return c.Write("Coupon already used")
+		return tmpl.Execute(c.Response, response{Error: "used"})
 	}
 
 	coupon.Email = new(string)
@@ -72,9 +73,8 @@ func (r *couponResource) update(c *routing.Context) error {
 
 	_, err = r.couponService.Update(rs, coupon.Id, coupon)
 	if err != nil {
-		return err
+		return tmpl.Execute(c.Response, response{Error: "error"})
 	}
 
-	http.Redirect(c.Response, c.Request, "https://cryptage.co", 301)
-	return nil
+	return tmpl.Execute(c.Response, response{Done: true})
 }
