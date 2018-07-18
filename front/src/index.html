@@ -191,7 +191,7 @@
                     {{.Card.FormatNumber .Card.Costs.Funds}}
                 </div>
                 {{ end }}
-                {{ if gt .Card.Costs.Level 0 }}
+                {{ if gt .Card.Costs.Level 1 }}
                 <div data-name="LEVEL" class="orb level">
                     {{.Card.FormatNumber .Card.Costs.Level}}
                 </div>
@@ -257,6 +257,8 @@
                     {{ end }}
                 </div>
             </div>
+
+            <div class="backdrop"></div>
         </div>
     </div>
 
